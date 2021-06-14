@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "genies library with react",
+  "main": "index.js",
+  "repository": "https://github.com/313yang/genies-library",
+  "author": "313yang",
+  "license": "MIT"
 }

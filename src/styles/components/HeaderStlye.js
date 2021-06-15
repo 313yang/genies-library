@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import { maxWidth, flexCenter } from "../variables";
 
 export const HeaderPC = styled.header`
   border-bottom: 1px solid #a451f7;
-  
   }
 `;
 export const HeaderCenter = styled.div`
@@ -10,9 +10,7 @@ export const HeaderCenter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+  ${maxWidth}
   div {
     width: 33%;
     display: flex;
@@ -28,10 +26,8 @@ export const HeaderCenter = styled.div`
     }
   }
   form {
+    ${flexCenter},
     width: 33%;
-    display: flex;
-
-    justify-content: center;
     position: relative;
     input {
       width: 400px;
@@ -66,4 +62,5 @@ export const Button = styled.button`
   color: ${(props) => (props.black ? "white" : "#3d3d3d")};
   background-color: ${(props) => (props.black ? "#3d3d3d" : "white")};
   border: 1px solid #3d3d3d;
+  cursor: pointer;
 `;

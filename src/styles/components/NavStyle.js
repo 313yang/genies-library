@@ -7,10 +7,11 @@ export const NavPC = styled.nav`
   ul {
     display: flex;
     li {
-      margin: 10px 50px 0;
+      margin: 10px 50px 3px;
       padding: 8px 5px;
       cursor: pointer;
       &:hover {
+        margin-bottom: 0;
         border-bottom: 3px solid #a451f7;
       }
     }

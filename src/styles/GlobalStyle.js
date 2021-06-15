@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
-font-family: 'Cookie', cursive;
-font-family: 'Lato', sans-serif;
+${reset};
 *, *::before, *::after {
     box-sizing: border-box;
     margin:0;
@@ -11,10 +11,11 @@ font-family: 'Lato', sans-serif;
   }
 body{
   font-family: 'Noto Sans KR', sans-serif;
+  color: #3d3d3d;
 }
 a{
   text-decoration: none;
-  color:#f2f2f2;
+  color: inherit;
   &:hover{
     color:white;
   }

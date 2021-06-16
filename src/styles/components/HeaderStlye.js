@@ -19,6 +19,7 @@ export const HeaderCenter = styled.div`
       h1 {
         font-family: "Cookie", cursive;
         font-size: 34px;
+        cursor: pointer;
       }
     }
     &:last-child {

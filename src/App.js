@@ -1,6 +1,6 @@
 import GlobalStyle from "./styles/GlobalStyle";
 import Header from "./components/Header";
-import Navigater from "./components/Navigater";
+import Navigator from "./components/Navigator";
 import Banner from "./components/Banner";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Navigater />
+      <Navigator />
       <main>
         <Banner />
       </main>

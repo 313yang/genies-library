@@ -55,7 +55,7 @@ function Header() {
               </ul>
             </NavMobile>
           ) : (
-            <NavMobile style={{ transform: "translateY(-100px)" }}></NavMobile>
+            <NavMobile style={{ transform: "translateY(20px)" }}></NavMobile>
           )}
         </>
       )}

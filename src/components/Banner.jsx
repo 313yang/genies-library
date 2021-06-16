@@ -6,7 +6,7 @@ import {
   ButtonWrap,
   DotButtons,
 } from "../styles/screen/BannerStyle";
-import "./banner.css";
+import "./classStyle.css";
 export default function Banner() {
   const TOTAL_SLIDES = 5;
   const imgUrl = "/img/";

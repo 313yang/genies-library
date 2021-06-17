@@ -36,7 +36,6 @@ function BookToday() {
               예상시간 2시간27분 <i className="fas fa-angle-right"></i>
             </p>{" "}
           </TodayWrapper>
-
           <TodayWrapper>
             <TodayUser>
               <div>

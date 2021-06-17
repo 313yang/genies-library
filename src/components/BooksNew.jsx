@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { MainTitle } from "../styles/components/MainTitle";
+import { BookList } from "../styles/components/BookContent";
 import Books from "./Books";
 
 export default function BooksNew() {
@@ -10,28 +12,34 @@ export default function BooksNew() {
     const {
       data: { items },
     } = await axios.get("/v1/search/book.json", {
-      params: { query: "책", sort: "count" },
+      params: { query: "책", display: 6, sort: "date" },
       headers: {
         "X-Naver-Client-Id": ID_KEY,
         "X-Naver-Client-Secret": SECRET_KEY,
       },
     });
-    //return setBooks(items);
+    return setBooks(items);
   };
 
-  //useEffect(getBooks);
+  useEffect(getBooks);
   return (
     <>
-      {items.map((book, index) => (
-        <Books
-          key={index}
-          pubdate={book.pubdate}
-          title={book.title}
-          description={book.description}
-          author={book.author}
-          image={book.image}
-        />
-      ))}
+      <MainTitle>
+        <h2>새로나온 신간</h2>
+        <i className="fas fa-chevron-right"></i>
+      </MainTitle>
+      <BookList>
+        {items.map((book, index) => (
+          <Books
+            key={index}
+            pubdate={book.pubdate}
+            title={book.title}
+            description={book.description}
+            author={book.author}
+            image={book.image}
+          />
+        ))}
+      </BookList>
     </>
   );
 }

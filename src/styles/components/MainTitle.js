@@ -13,7 +13,7 @@ export const MainTitle = styled.div`
     padding: 20px;
   }
   h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
   i {
     font-size: 20px;

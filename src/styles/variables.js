@@ -9,3 +9,7 @@ export const maxWidth = css`
   max-width: 1280px;
   margin: 0 auto;
 `;
+export const author = css`
+  color: #6d6d6d;
+  font-size: 14px;
+`;

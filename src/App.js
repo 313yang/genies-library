@@ -2,7 +2,8 @@ import GlobalStyle from "./styles/GlobalStyle";
 import Header from "./components/Header";
 import Navigator from "./components/Navigator";
 import Banner from "./components/Banner";
-import Todays from "./components/Todays";
+import BookToday from "./components/BookToday";
+import BooksNew from "./components/BooksNew";
 
 function App() {
   return (
@@ -10,9 +11,10 @@ function App() {
       <GlobalStyle />
       <Header />
       <Navigator />
+      <Banner />
       <main>
-        <Banner />
-        <Todays />
+        <BookToday />
+        <BooksNew />
       </main>
     </>
   );

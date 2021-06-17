@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { flexCenter, maxWidth } from "./variables";
+
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
@@ -19,6 +21,11 @@ a{
   &:hover{
     color:white;
   }
+}
+main{
+  ${flexCenter}
+  flex-direction:column;
+  ${maxWidth}
 }
 `;
 export default GlobalStyle;

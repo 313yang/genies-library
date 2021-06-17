@@ -6,22 +6,23 @@ import Books from "./Books";
 
 export default function BooksNew() {
   const [items, setBooks] = useState([]);
-  const getBooks = async () => {
-    const ID_KEY = "8CqdlZYoXcBYV879UOcE";
-    const SECRET_KEY = "GtRTsDyGoa";
-    const {
-      data: { items },
-    } = await axios.get("/v1/search/book.json", {
-      params: { query: "책", display: 6, sort: "date" },
-      headers: {
-        "X-Naver-Client-Id": ID_KEY,
-        "X-Naver-Client-Secret": SECRET_KEY,
-      },
-    });
-    return setBooks(items);
-  };
-
-  useEffect(getBooks);
+  const ID_KEY = "8CqdlZYoXcBYV879UOcE";
+  const SECRET_KEY = "GtRTsDyGoa";
+  useEffect(() => {
+    const getBooks = async () => {
+      const {
+        data: { items },
+      } = await axios.get("/v1/search/book.json", {
+        params: { query: "신간", display: 6, sort: "date" },
+        headers: {
+          "X-Naver-Client-Id": ID_KEY,
+          "X-Naver-Client-Secret": SECRET_KEY,
+        },
+      });
+      setBooks(items);
+    };
+    getBooks();
+  }, []);
   return (
     <>
       <MainTitle>

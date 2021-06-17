@@ -14,6 +14,7 @@ export const MainTitle = styled.div`
   }
   h2 {
     font-size: 24px;
+    font-weight: 700;
   }
   i {
     font-size: 20px;

@@ -33,15 +33,22 @@ export const TodayTag = styled.div`
   div {
     flex-direction: column;
     align-items: flex-start;
+    p:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 `;
 export const TodayUser = styled.div`
   div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5px;
     div {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
-    display: flex;
   }
   img {
     width: 50px;

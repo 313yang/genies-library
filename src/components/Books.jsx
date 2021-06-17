@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 function Books({ title, image, description, author, pubdate }) {
   return (
     <div>
-      <h1>{title}</h1>
       <img src={image} alt={title} />
+      <h1>{title}</h1>
       <h3>{author}</h3>
-      <p>{description}</p>
-      <p>{pubdate}</p>
     </div>
   );
 }

@@ -26,7 +26,7 @@ export const FooterWrapper = styled.div`
     h6 {
       color: #6d6d6d;
       font-size: 12px;
-      margin-top: 20px;
+      margin: 20px 0;
     }
   }
   div:last-child {

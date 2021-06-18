@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import { maxWidth } from "../variables";
-
+import { author, maxWidth } from "../variables";
+export const Booksection = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
 export const BookList = styled.div`
   display: flex;
   justify-content: space-between;
@@ -35,5 +38,9 @@ export const BookContent = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  h3 {
+    ${author}
+    margin-top:5px;
   }
 `;

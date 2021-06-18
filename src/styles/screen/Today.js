@@ -3,16 +3,35 @@ import { author, flexCenter } from "../variables";
 
 export const Today = styled.section`
   ${flexCenter};
+  flex-direction: column;
+`;
+export const TodayWrappers = styled.div`
+  display: flex;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 20px;
+  i {
+    margin: 0 3px;
+  }
+  div {
+    p:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+`;
+export const TodayWrapperInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 `;
 export const TodayWrapper = styled.div`
   display: flex;
-  align-items: flex-end;
   border: 1px solid #e1e1e1;
   border-radius: 10px;
   padding: 20px;
-  margin: 0 20px 20px;
+  align-items: flex-end;
   img {
-    height: 200px;
+    height: 210px;
     margin-right: 10px;
   }
   div {
@@ -24,32 +43,20 @@ export const TodayWrapper = styled.div`
     }
   }
 `;
-export const TodayTag = styled.div`
-  font-size: 14px;
-  line-height: 1.2;
-  i {
-    margin: 0 3px;
-  }
-  div {
-    flex-direction: column;
-    align-items: flex-start;
-    p:not(:last-child) {
-      margin-bottom: 5px;
-    }
+export const TodayInfo = styled(TodayWrapper)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  :not(:last-child) {
+    margin-bottom: 20px;
   }
 `;
 export const TodayUser = styled.div`
-  div {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 5px;
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
   img {
     width: 50px;
     height: 50px;

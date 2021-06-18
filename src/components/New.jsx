@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MainTitle } from "../styles/components/MainTitle";
-import { BookList } from "../styles/components/BookContent";
+import { BookList, Booksection } from "../styles/components/BookContent";
 import Books from "./Books";
 import { bookSearch } from "../api";
 
@@ -25,7 +25,7 @@ export default function BooksNew() {
     setBooks(documents);
   };
   return (
-    <>
+    <Booksection>
       <MainTitle>
         <h2>새로나온 신간</h2>
         <i className="fas fa-chevron-right"></i>
@@ -41,6 +41,6 @@ export default function BooksNew() {
           />
         ))}
       </BookList>
-    </>
+    </Booksection>
   );
 }

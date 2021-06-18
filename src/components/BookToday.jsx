@@ -1,6 +1,6 @@
+import { Booksection } from "../styles/components/BookContent";
 import { MainTitle } from "../styles/components/MainTitle";
 import {
-  Today,
   TodayWrapperInfo,
   TodayWrappers,
   TodayWrapper,
@@ -10,7 +10,7 @@ import {
 
 function BookToday() {
   return (
-    <Today>
+    <Booksection>
       <MainTitle>
         <h2>오늘의 책</h2>
         <i className="fas fa-chevron-right"></i>
@@ -53,7 +53,7 @@ function BookToday() {
           </TodayInfo>
         </TodayWrapperInfo>
       </TodayWrappers>
-    </Today>
+    </Booksection>
   );
 }
 export default BookToday;

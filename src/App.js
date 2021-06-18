@@ -7,6 +7,7 @@ import BooksNew from "./components/New";
 import BooksBestseller from "./components/Bestseller";
 import { BooksWeekly1, BooksWeekly2 } from "./components/Weekly";
 import Footer from "./components/Footer";
+import Quote from "./components/Quote";
 
 function App() {
   return (
@@ -14,13 +15,14 @@ function App() {
       <GlobalStyle />
       <Header />
       <Navigator />
-      <Banner />
       <main>
+        <Banner />
         <BookToday />
         <BooksNew />
         <BooksBestseller />
         <BooksWeekly1 />
         <BooksWeekly2 />
+        <Quote />
       </main>
       <Footer />
     </>

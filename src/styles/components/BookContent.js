@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { author, maxWidth } from "../variables";
 export const Booksection = styled.section`
   display: flex;
+  align-items: center;
   flex-direction: column;
 `;
 export const BookList = styled.div`

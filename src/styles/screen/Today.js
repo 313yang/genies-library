@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { author, flexCenter } from "../variables";
+import { author } from "../variables";
 
-export const Today = styled.section`
-  ${flexCenter};
-  flex-direction: column;
-`;
 export const TodayWrappers = styled.div`
   display: flex;
   font-size: 14px;

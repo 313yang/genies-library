@@ -14,6 +14,8 @@ ${reset};
 body{
   font-family: 'Noto Sans KR', sans-serif;
   color: #3d3d3d;
+  overflow-x: hidden;
+
 }
 a{
   text-decoration: none;

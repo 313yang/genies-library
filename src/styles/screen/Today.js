@@ -14,11 +14,18 @@ export const TodayWrappers = styled.div`
       margin-bottom: 5px;
     }
   }
+  @media (max-width: 780px) {
+    display: block;
+  }
 `;
 export const TodayWrapperInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  @media (max-width: 780px) {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
 `;
 export const TodayWrapper = styled.div`
   display: flex;

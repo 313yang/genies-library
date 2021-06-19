@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { maxWidth, flexCenter } from "../variables";
+import { maxWidth, flexCenter, BorderBottom } from "../variables";
 
 export const HeaderPC = styled.header`
-  border-bottom: 1px solid #a451f7;
+  ${BorderBottom};
   }
 `;
 export const HeaderCenter = styled.div`
@@ -33,7 +33,7 @@ export const HeaderForm = styled.form`
   position: relative;
   input {
     width: 400px;
-    border: 1px solid #dfdfdf;
+    border: 1px solid #e1e1e1;
     padding: 10px;
     border-radius: 3px;
     &:focus,
@@ -72,7 +72,7 @@ export const HeaderMobile = styled.header`
   div {
     z-index: 8;
     background-color: white;
-    border-bottom: 1px solid #a451f7;
+    ${BorderBottom};
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -100,7 +100,7 @@ export const HeaderMobile = styled.header`
     z-index: 10;
     input {
       width: 50%;
-      border: 1px solid #dfdfdf;
+      border: 1px solid #e1e1e1;
       padding: 8px 30px;
       border-radius: 100px;
       &:focus,

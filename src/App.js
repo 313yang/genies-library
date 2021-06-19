@@ -1,33 +1,15 @@
-import GlobalStyle from "./styles/GlobalStyle";
-import Header from "./components/Header";
-import Navigator from "./components/Navigator";
-import Banner from "./components/Banner";
-import BookToday from "./components/BookToday";
-import BooksNew from "./components/New";
-import BooksBestseller from "./components/Bestseller";
-import { BooksWeekly1, BooksWeekly2 } from "./components/Weekly";
-import Footer from "./components/Footer";
-import Quote from "./components/Quote";
-import Genres from "./components/Genres";
+import { HashRouter, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import SignIn from "./routes/SignIn";
+import SignUp from "./routes/SignUp";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <Navigator />
-      <main>
-        <Banner />
-        <BookToday />
-        <BooksNew />
-        <BooksBestseller />
-        <Genres />
-        <BooksWeekly1 />
-        <BooksWeekly2 />
-        <Quote />
-      </main>
-      <Footer />
-    </>
+    <HashRouter>
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/signin" component={SignIn} />
+      <Route path="/signup" component={SignUp} />
+    </HashRouter>
   );
 }
 

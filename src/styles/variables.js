@@ -13,3 +13,6 @@ export const author = css`
   color: #6d6d6d;
   font-size: 14px;
 `;
+export const BorderBottom = css`
+  border-bottom: 1px solid #a451f7;
+`;

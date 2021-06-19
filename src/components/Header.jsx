@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 import {
   HeaderPC,
   HeaderMobile,
@@ -63,7 +64,9 @@ function Header() {
         <HeaderPC>
           <HeaderCenter>
             <div>
-              <h1>genie's library</h1>
+              <Link to="/">
+                <h1>genie's library</h1>
+              </Link>
             </div>
             <HeaderForm>
               <input type="text" placeholder="Search books" />
@@ -72,8 +75,12 @@ function Header() {
               </button>
             </HeaderForm>
             <div>
-              <Button>회원가입</Button>
-              <Button black>로그인</Button>
+              <Link to="/signup">
+                <Button>회원가입</Button>
+              </Link>
+              <Link to="/signin">
+                <Button black>로그인</Button>
+              </Link>
             </div>
           </HeaderCenter>
         </HeaderPC>

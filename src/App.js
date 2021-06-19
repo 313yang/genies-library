@@ -8,6 +8,7 @@ import BooksBestseller from "./components/Bestseller";
 import { BooksWeekly1, BooksWeekly2 } from "./components/Weekly";
 import Footer from "./components/Footer";
 import Quote from "./components/Quote";
+import Genres from "./components/Genres";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <BookToday />
         <BooksNew />
         <BooksBestseller />
+        <Genres />
         <BooksWeekly1 />
         <BooksWeekly2 />
         <Quote />

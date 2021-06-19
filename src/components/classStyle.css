@@ -1,3 +1,7 @@
 .white {
   background-color: white !important;
 }
+.clickedBtn {
+  color: white !important;
+  background-color: #333333 !important;
+}

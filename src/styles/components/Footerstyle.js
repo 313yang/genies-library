@@ -28,6 +28,7 @@ export const FooterWrapper = styled.div`
       font-size: 12px;
       margin: 20px 0;
     }
+    margin: 20px 0 40px;
   }
   div:last-child {
     display: flex;
@@ -43,6 +44,20 @@ export const FooterWrapper = styled.div`
       margin-left: 5px;
       font-size: 12px;
       cursor: pointer;
+    }
+  }
+  @media (max-width: 780px) {
+    div {
+      h5 {
+        font-size: 16px;
+      }
+      a {
+        font-size: 12px;
+        margin-right: 8px;
+      }
+      h6 {
+        font-size: 10px;
+      }
     }
   }
 `;

@@ -7,7 +7,7 @@ export const MainTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #a451f7;
-  margin: 40px 0;
+  margin: 20px 0;
   h2,
   i {
     padding: 20px;
@@ -18,5 +18,10 @@ export const MainTitle = styled.div`
   }
   i {
     font-size: 20px;
+  }
+  @media (max-width: 780px) {
+    h2 {
+      font-size: 20px;
+    }
   }
 `;

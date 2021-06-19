@@ -4,10 +4,10 @@ import { flexCenter } from "../variables";
 export const QuoteStyle = styled.div`
   ${flexCenter}
   align-items: center;
-  height: 380px;
   background: center / cover no-repeat
     url("https://images.millie.co.kr/postimage/20190722/15637624575473.jpg");
   width: 100%;
+  height: 380px;
   margin-bottom: 20px;
   div {
     ${flexCenter}
@@ -36,6 +36,18 @@ export const QuoteStyle = styled.div`
     h6 {
       font-size: 18px;
       margin-top: 15px;
+    }
+  }
+  @media (max-width: 780px) {
+    div {
+      width: 80%;
+      span,
+      p {
+        font-size: 16px;
+      }
+      h6 {
+        font-size: 14px;
+      }
     }
   }
 `;

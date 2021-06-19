@@ -14,9 +14,7 @@ export function BooksWeekly1() {
   const getBooks = async () => {
     const params = {
       query: "영어 ",
-      sort: "",
       size: "8",
-      target: "",
     };
 
     const {
@@ -54,9 +52,7 @@ export function BooksWeekly2() {
   const getBooks = async () => {
     const params = {
       query: "정여울 ",
-      sort: "",
       size: "8",
-      target: "",
     };
 
     const {

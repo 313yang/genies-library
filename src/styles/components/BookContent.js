@@ -9,6 +9,7 @@ export const BookList = styled.div`
   display: flex;
   justify-content: space-between;
   ${maxWidth}
+  margin-top: 20px;
   overflow-x: scroll;
   padding: 0 20px;
   &::-webkit-scrollbar {
@@ -43,5 +44,32 @@ export const BookContent = styled.div`
   h3 {
     ${author}
     margin-top:5px;
+  }
+`;
+export const GenresBookList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+export const GenresBookContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  div {
+    padding: 20px;
+    width: 400px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f4ee;
+    border-radius: 20px;
+    img {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 2px rgba(0, 0, 0, 0.1);
+      border: 1px solid #4646461c;
+    }
+  }
+  h1 {
+    font-weight: 700;
+    margin: 10px 5px 20px;
   }
 `;

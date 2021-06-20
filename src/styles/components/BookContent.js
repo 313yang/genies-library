@@ -54,9 +54,9 @@ export const GenresBookList = styled.div`
 export const GenresBookContent = styled.div`
   display: flex;
   flex-direction: column;
+  width: 400px;
   div {
     padding: 20px;
-    width: 400px;
     height: 220px;
     display: flex;
     justify-content: center;

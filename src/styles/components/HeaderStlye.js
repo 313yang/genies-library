@@ -24,6 +24,13 @@ export const HeaderCenter = styled.div`
     }
     &:last-child {
       justify-content: flex-end;
+      button[type="submit"] {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 6px;
+        font-size: 16px;
+      }
     }
   }
 `;
@@ -31,28 +38,6 @@ export const HeaderForm = styled.form`
   ${flexCenter},
   width: 33%;
   position: relative;
-  input {
-    width: 400px;
-    border: 1px solid #e1e1e1;
-    padding: 10px;
-    border-radius: 3px;
-    &:focus,
-    &:active {
-      outline: none;
-    }
-    &::placeholder {
-      font-family: "Lato", sans-serif;
-    }
-  }
-  button {
-    position: absolute;
-    right: 5px;
-    top: 3px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 7px 12px;
-  }
 `;
 export const Button = styled.button`
   font-family: "Noto Sans KR", sans-serif;
@@ -89,37 +74,17 @@ export const HeaderMobile = styled.header`
       }
       &:last-child {
         margin-right: 20px;
+        button[type="submit"] {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 6px;
+          font-size: 16px;
+        }
       }
     }
   }
-  form {
-    ${flexCenter}
-    top: -17px;
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    input {
-      width: 50%;
-      border: 1px solid #e1e1e1;
-      padding: 8px 30px;
-      border-radius: 100px;
-      &:focus,
-      &:active {
-        outline: none;
-      }
-      &::placeholder {
-        font-family: "Lato", sans-serif;
-      }
-    }
-    button {
-      position: absolute;
-      right: 26%;
-      top: 4px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      padding: 5px 10px;
-    }
+  
   }
   .fa-times {
     font-size: 28px;

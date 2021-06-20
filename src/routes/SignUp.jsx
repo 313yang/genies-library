@@ -34,7 +34,7 @@ function SignUp() {
         </SignSocial>
         <SignLink>
           <p>
-            이미 계정이 있으신가요? <Link to="/signup">로그인 &rarr;</Link>
+            이미 계정이 있으신가요? <Link to="/signin">로그인 &rarr;</Link>
           </p>
         </SignLink>
       </SignInUp>

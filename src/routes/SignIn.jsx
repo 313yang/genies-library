@@ -1,10 +1,13 @@
 import Header from "../components/Header";
 import GlobalStyle from "../styles/GlobalStyle";
+import { Link } from "react-router-dom";
+
 import {
   SignForm,
   SignInUp,
   SignSocial,
   SocialBtn,
+  SignLink,
 } from "../styles/screen/SignForm";
 
 function SignIn() {
@@ -27,6 +30,11 @@ function SignIn() {
             <i class="fab fa-google"></i> 구글 계정으로 로그인
           </SocialBtn>
         </SignSocial>
+        <SignLink>
+          <p>
+            아직 계정이 없으신가요? <Link to="/signup">회원가입 &rarr;</Link>
+          </p>
+        </SignLink>
       </SignInUp>
     </>
   );

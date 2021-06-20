@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { bookSearch } from "../api";
 import {
   HeaderPC,
   HeaderMobile,
@@ -9,8 +10,17 @@ import {
   HeaderForm,
 } from "../styles/components/HeaderStlye";
 import { NavMobile } from "../styles/components/NavStyle";
+import Search from "../routes/Search";
 
 function Header() {
+  const [value, setValue] = useState("");
+  const handleSubmit = (e) => {
+    console.log(value);
+  };
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    handleSubmit();
+  };
   const isPc = useMediaQuery({
     query: "(min-width:781px)",
   });
@@ -33,17 +43,34 @@ function Header() {
                 )}
               </div>
               <div>
-                <h1>genie's library</h1>
+                <Link to="/">
+                  <h1>genie's library</h1>
+                </Link>
               </div>
               <div>
-                <i className="fas fa-user-circle"></i>
+                <Link to="/signin">
+                  <i className="fas fa-user-circle"></i>
+                </Link>
               </div>
             </div>
-            <form>
-              <input type="text" placeholder="Search books" />
-              <button>
-                <i className="fas fa-search"></i>
-              </button>
+            <form method="get" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Search"
+                name="keyword"
+                value={value}
+                onChange={handleChange}
+              />
+              <Link
+                to={{
+                  pathname: "/search",
+                  state: value,
+                }}
+              >
+                <button type="submit" value={value}>
+                  <i className="fas fa-search"></i>
+                </button>
+              </Link>
             </form>
           </HeaderMobile>
           {isOpen ? (

@@ -16,6 +16,11 @@ export const BannerSlide = styled.div`
     height: 370px;
     object-fit: cover;
   }
+  @media (max-width: 780px) {
+    img {
+      height: 280px;
+    }
+  }
 `;
 export const ButtonWrap = styled.div`
   position: absolute;

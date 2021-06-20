@@ -24,6 +24,7 @@ export const SignForm = styled.form`
     &:focus,
     &:active {
       outline: none;
+      ${BorderBottom}
     }
   }
   input[type="submit"] {
@@ -39,7 +40,7 @@ export const SignSocial = styled.div`
   margin: 20px;
   p {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 `;
@@ -50,4 +51,10 @@ export const SocialBtn = styled.button`
   padding: 10px 10px;
   border: none;
   margin-bottom: 10px;
+`;
+export const SignLink = styled.div`
+  font-size: 14px;
+  a:hover {
+    text-decoration: underline;
+  }
 `;

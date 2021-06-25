@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ded955c9.chunk.css",
-    "main.js": "/static/js/main.e4161858.chunk.js",
-    "main.js.map": "/static/js/main.e4161858.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.fa6f2463.js",
-    "runtime-main.js.map": "/static/js/runtime-main.fa6f2463.js.map",
-    "static/js/2.cca6c7cd.chunk.js": "/static/js/2.cca6c7cd.chunk.js",
-    "static/js/2.cca6c7cd.chunk.js.map": "/static/js/2.cca6c7cd.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.ded955c9.chunk.css.map": "/static/css/main.ded955c9.chunk.css.map",
-    "static/js/2.cca6c7cd.chunk.js.LICENSE.txt": "/static/js/2.cca6c7cd.chunk.js.LICENSE.txt"
+    "main.css": "/genies-library/static/css/main.ded955c9.chunk.css",
+    "main.js": "/genies-library/static/js/main.e4161858.chunk.js",
+    "main.js.map": "/genies-library/static/js/main.e4161858.chunk.js.map",
+    "runtime-main.js": "/genies-library/static/js/runtime-main.124e6652.js",
+    "runtime-main.js.map": "/genies-library/static/js/runtime-main.124e6652.js.map",
+    "static/js/2.ad0752a5.chunk.js": "/genies-library/static/js/2.ad0752a5.chunk.js",
+    "static/js/2.ad0752a5.chunk.js.map": "/genies-library/static/js/2.ad0752a5.chunk.js.map",
+    "index.html": "/genies-library/index.html",
+    "static/css/main.ded955c9.chunk.css.map": "/genies-library/static/css/main.ded955c9.chunk.css.map",
+    "static/js/2.ad0752a5.chunk.js.LICENSE.txt": "/genies-library/static/js/2.ad0752a5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fa6f2463.js",
-    "static/js/2.cca6c7cd.chunk.js",
+    "static/js/runtime-main.124e6652.js",
+    "static/js/2.ad0752a5.chunk.js",
     "static/css/main.ded955c9.chunk.css",
     "static/js/main.e4161858.chunk.js"
   ]

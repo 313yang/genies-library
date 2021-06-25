@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/genies-library/static/css/main.ded955c9.chunk.css",
-    "main.js": "/genies-library/static/js/main.69a4222c.chunk.js",
-    "main.js.map": "/genies-library/static/js/main.69a4222c.chunk.js.map",
+    "main.js": "/genies-library/static/js/main.e36962cb.chunk.js",
+    "main.js.map": "/genies-library/static/js/main.e36962cb.chunk.js.map",
     "runtime-main.js": "/genies-library/static/js/runtime-main.124e6652.js",
     "runtime-main.js.map": "/genies-library/static/js/runtime-main.124e6652.js.map",
     "static/js/2.ad0752a5.chunk.js": "/genies-library/static/js/2.ad0752a5.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.124e6652.js",
     "static/js/2.ad0752a5.chunk.js",
     "static/css/main.ded955c9.chunk.css",
-    "static/js/main.69a4222c.chunk.js"
+    "static/js/main.e36962cb.chunk.js"
   ]
 }

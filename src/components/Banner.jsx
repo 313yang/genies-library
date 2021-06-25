@@ -9,7 +9,7 @@ import {
 import "./classStyle.css";
 export default function Banner() {
   const TOTAL_SLIDES = 5;
-  const imgUrl = "/img/";
+  const imgUrl = "./img/";
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentBtn, setCurrentBtn] = useState(0);
   const slideRef = useRef(null);

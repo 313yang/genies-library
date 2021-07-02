@@ -10,22 +10,19 @@ export default function Genres() {
   const [books, setBooks] = useState([]);
   const [genres, setGenres] = useState("주식");
 
-  const getBooks = useCallback(
-    async (e) => {
-      let params = {
-        query: genres,
-        size: "6",
-      };
-      if (genres === "장르") {
-        params = { query: "장르", sort: "latest", size: "6" };
-      }
-      const {
-        data: { documents },
-      } = await bookSearch(params);
-      setBooks(documents);
-    },
-    [genres]
-  );
+  const getBooks = useCallback(async () => {
+    let params = {
+      query: genres,
+      size: "6",
+    };
+    if (genres === "장르") {
+      params = { query: "장르", sort: "latest", size: "6" };
+    }
+    const {
+      data: { documents },
+    } = await bookSearch(params);
+    setBooks(documents);
+  }, [genres]);
   const handleGenres = (e) => {
     const {
       target: { id },

@@ -1,27 +1,42 @@
 import GlobalStyle from "../styles/GlobalStyle";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { author, flexCenter } from "../styles/variables";
 
 import { bookSearch } from "../api";
 
+const useInput = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
+  const onChange = (e) => {
+    const {
+      target: { value },
+    } = e;
+    let willChange = true;
+    if (willChange) {
+      setValue(value);
+    }
+  };
+  return { value, onChange };
+};
 function Search() {
-  const [value, setValue] = useState("");
   const [books, setBooks] = useState([]);
+  const [sort, setSort] = useState("");
   const [isFound, setFound] = useState(false);
-  const search = value;
 
-  const getBooks = async () => {
+  const btns = document.querySelectorAll("button");
+  const searching = useInput("");
+
+  const getBooks = useCallback(async () => {
     try {
-      if (search === "") {
+      if (searching.value === "") {
         setBooks([]);
         setFound(false);
       } else {
         const params = {
-          query: search,
-          sort: "",
+          query: searching.value,
+          sort,
           page: "1",
           size: "50",
         };
@@ -34,33 +49,50 @@ function Search() {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [sort, searching.value]);
   const handleSubmit = (e) => {
     e.preventDefault();
     getBooks();
   };
-  const handleChange = (e) => {
-    setValue(e.target.value);
+  const sortLatest = (e) => {
+    btns.forEach((btn) => {
+      btn.classList.remove("clickedBtn");
+    });
+    setSort("latest");
+    e.target.classList.add("clickedBtn");
+    getBooks();
   };
+  const sortNon = (e) => {
+    btns.forEach((btn) => {
+      btn.classList.remove("clickedBtn");
+    });
+    setSort("");
+    e.target.classList.add("clickedBtn");
+    getBooks();
+  };
+  useEffect(() => {
+    getBooks();
+  }, [getBooks]);
   return (
     <>
       <GlobalStyle />
       <Header />
       <main>
         <SearchForm onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search"
-            value={value}
-            onChange={handleChange}
-          />
+          <input type="text" placeholder="Search" {...searching} />
         </SearchForm>
+        <SearchSortBtns>
+          <button className="clickedBtn" onClick={sortNon}>
+            정확도순
+          </button>
+          <button onClick={sortLatest}>신간순</button>
+        </SearchSortBtns>
         {!isFound ? (
           <NotFound>Not Found.</NotFound>
         ) : (
           <SearchList>
             {books.map((book, index) => (
-              <SearchBooks>
+              <SearchBooks key={index}>
                 <img src={book.thumbnail} alt={book.title} />
                 <h1>{book.title}</h1>
                 <h3>{book.authors}</h3>
@@ -79,6 +111,7 @@ const SearchForm = styled.form`
   ${flexCenter},
   width: 33%;
   margin-top: 50px;
+  position: relative;
   input {
     width: 400px;
     border: 1px solid #e1e1e1;
@@ -91,14 +124,6 @@ const SearchForm = styled.form`
     &::placeholder {
       font-family: "Lato", sans-serif;
     }
-  }
-  button {
-    border: none;
-    background-color: #e9e9e9;
-    border: 1px solid #d6d6d6;
-    cursor: pointer;
-    padding: 10px 12px;
-    border-radius: 3px;
   }
 `;
 const NotFound = styled.h4`
@@ -135,5 +160,21 @@ const SearchBooks = styled.div`
   @media (max-width: 780px) {
     width: 120px;
     margin: 10px;
+  }
+`;
+const SearchSortBtns = styled.div`
+  ${flexCenter}
+  button {
+    margin: 20px 10px 0px;
+    background-color: #fff;
+    color: #333333;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 `;

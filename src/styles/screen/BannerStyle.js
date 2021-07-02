@@ -43,8 +43,10 @@ export const Button = styled.button`
 `;
 export const DotButtons = styled.div`
   position: absolute;
+  ${flexCenter}
   bottom: 10px;
-  left: 47%;
+  width: 100%;
+  left: 0%;
   z-index: 50;
   button {
     margin: 0 3px;

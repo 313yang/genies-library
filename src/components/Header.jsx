@@ -19,6 +19,9 @@ function Header() {
   const toggleNav = () => {
     setNav((isOpen) => !isOpen);
   };
+  const scrollToBest = () => {
+    window.scrollTo({ top: 1400, behavior: "smooth" });
+  };
   return (
     <>
       {isMobile && (
@@ -47,10 +50,15 @@ function Header() {
           {isOpen ? (
             <NavMobile>
               <ul>
-                <li>Home</li>
-                <li>BestSeller</li>
-                <li>Category</li>
-                <li>My library</li>
+                <Link to="/" onClick={scrollToBest}>
+                  <li>BestSeller</li>
+                </Link>
+                <Link to="/">
+                  <li>Category</li>
+                </Link>
+                <Link to="/search">
+                  <li>My library</li>
+                </Link>
                 <Link to="/search">
                   <li>Search</li>
                 </Link>
